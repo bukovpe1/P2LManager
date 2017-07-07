@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.check-box {
+    -fx-text-fill: #9b9b9b; 
+}
+
+.check-box:selected {
+    -fx-text-fill: black;
+}

@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.DoubleSpinnerValueFactory?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="840.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.buky.p2lmanager.controller.EditBlinkProgramController">
+   <stylesheets>
+        <URL value="@/styles/StyleBlinkProgram.css" />
+    </stylesheets>
+    <children>
+      <BorderPane layoutX="166.0" layoutY="132.0" prefHeight="444.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <GridPane maxHeight="480.0" maxWidth="520.0" minHeight="480.0" minWidth="520.0" prefHeight="480.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="97.16806722689074" minHeight="10.0" percentHeight="15.0" prefHeight="53.00000000000001" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="35.0" minHeight="0.0" percentHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="14.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Zpoždění" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="T off" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="T on" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Opakování" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="89.0" text="RGB OFF" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="RGB ON" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="R" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="G" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="B" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="sliderROff1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                  </GridPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <children>
+                        <Rectangle fx:id="rectOff1" arcHeight="5.0" arcWidth="5.0" height="30.0" layoutX="-16.0" layoutY="-86.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="185.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                        <Rectangle fx:id="rectOn1" arcHeight="5.0" arcWidth="5.0" height="30.0" layoutX="-16.0" layoutY="-86.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <GridPane layoutX="50.0" layoutY="120.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderGOff1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="50.0" layoutY="170.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderBOff1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="11.799999999999997" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="50.0" layoutY="219.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderROn1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="11.799999999999997" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="320.0" layoutY="120.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderGOn1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="13.799999999999999" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="320.0" layoutY="170.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderBOn1" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="13.799999999999999" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="buttonCol1OnR" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" />
+                        <Button fx:id="buttonCol1OnG" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" />
+                        <Button fx:id="buttonCol1OnB" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" />
+                        <Button fx:id="buttonCol1OnW" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" />
+                        <Button fx:id="buttonCol1OnY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OnM" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OnC" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OnBk" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label text="Sekvence 1" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <Button fx:id="buttonCol1OffR" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" />
+                        <Button fx:id="buttonCol1OffG" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" />
+                        <Button fx:id="buttonCol1OffB" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" />
+                        <Button fx:id="buttonCol1OffW" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" />
+                        <Button fx:id="buttonCol1OffY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OffM" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OffC" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol1OffBk" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Spinner fx:id="spinnerDelay1" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="6.3" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerTOff1" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="12.75" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerTOn1" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="12.75" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerRep1" editable="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="0" max="254" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <CheckBox fx:id="checkBoxStartOn1" mnemonicParsing="false" text="Začít na On" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="checkBoxInfRep1" mnemonicParsing="false" text="Nekonečná&#10;sekvence" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="5.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </left>
+         <bottom>
+            <BorderPane minHeight="20.0" BorderPane.alignment="CENTER">
+               <right>
+                  <GridPane minHeight="10.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="25.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="T start" GridPane.rowIndex="1" />
+                        <Label text="T end" GridPane.rowIndex="2" />
+                        <Spinner fx:id="spinnerTStart" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <valueFactory>
+                                <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="100000" min="0" />
+                            </valueFactory>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Spinner>
+                        <Spinner fx:id="spinnerTEnd" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <valueFactory>
+                                <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="10" max="100000" min="0" />
+                            </valueFactory>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Spinner>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="40.0" left="20.0" top="30.0" />
+                     </BorderPane.margin>
+                  </GridPane>
+               </right>
+               <left>
+                  <AreaChart fx:id="blinkPlot" animated="false" horizontalGridLinesVisible="false" legendVisible="false" minHeight="10.0" minWidth="10.0" prefHeight="300.0" prefWidth="881.0" BorderPane.alignment="CENTER">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis minorTickCount="0" side="LEFT" tickLabelsVisible="false" tickLength="2.0" />
+                    </yAxis>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </BorderPane.margin>
+                  </AreaChart>
+               </left>
+            </BorderPane>
+         </bottom>
+         <center>
+            <GridPane maxHeight="480.0" maxWidth="520.0" minHeight="480.0" minWidth="520.0" prefHeight="480.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Zpoždění" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="T off" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="T on" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Opakování" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="89.0" text="RGB OFF" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="RGB ON" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="R" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="G" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="B" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderROff2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <children>
+                        <Rectangle fx:id="rectOff2" arcHeight="5.0" arcWidth="5.0" height="30.0" layoutX="-16.0" layoutY="-86.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="185.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                        <Rectangle fx:id="rectOn2" arcHeight="5.0" arcWidth="5.0" height="30.0" layoutX="-16.0" layoutY="-86.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <GridPane layoutX="50.0" layoutY="120.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderGOff2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="50.0" layoutY="170.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderBOff2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="11.799999999999997" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="50.0" layoutY="219.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderROn2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="11.799999999999997" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="320.0" layoutY="120.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderGOn2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="13.799999999999999" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="320.0" layoutY="170.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="111.0" text="${sliderROn.value}" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider fx:id="sliderBOn2" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" minorTickCount="0" snapToTicks="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" percentHeight="40.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="13.799999999999999" minHeight="0.0" percentHeight="60.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label text="Sekvence 2" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <children>
+                        <Button fx:id="buttonCol2OnR" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" />
+                        <Button fx:id="buttonCol2OnG" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" />
+                        <Button fx:id="buttonCol2OnB" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" />
+                        <Button fx:id="buttonCol2OnW" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" />
+                        <Button fx:id="buttonCol2OnY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OnM" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OnC" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OnBk" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <Button fx:id="buttonCol2OffR" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" />
+                        <Button fx:id="buttonCol2OffG" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" />
+                        <Button fx:id="buttonCol2OffB" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" />
+                        <Button fx:id="buttonCol2OffW" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" />
+                        <Button fx:id="buttonCol2OffY" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OffM" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OffC" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonCol2OffBk" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#setRGBColor" opacity="0.75" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Spinner fx:id="spinnerDelay2" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="6.3" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerTOff2" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="12.75" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerTOn2" editable="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="0" max="12.75" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Spinner fx:id="spinnerRep2" editable="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="0" max="254" min="0" />
+                     </valueFactory>
+                  </Spinner>
+                  <Button mnemonicParsing="false" onAction="#actualizeGraph" text="Aktualizovat" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <CheckBox fx:id="checkBoxStartOn2" mnemonicParsing="false" text="Začít na On" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="checkBoxInfRep2" mnemonicParsing="false" text="Nekonečná&#10;sekvence" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+               </columnConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="97.16806722689074" minHeight="10.0" percentHeight="15.0" prefHeight="53.00000000000001" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="35.0" minHeight="0.0" percentHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="14.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ChoiceBox fx:id="choiceBoxStates" layoutX="490.0" layoutY="10.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

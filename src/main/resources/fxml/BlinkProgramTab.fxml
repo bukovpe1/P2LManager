@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="770.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.buky.p2lmanager.controller.BlinkProgramTabController">
+    <stylesheets>
+        <URL value="@/styles/blinkprogramtab.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="207.0" layoutY="130.0" prefHeight="340.0" prefWidth="708.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="550.0" minWidth="300.0" prefWidth="550.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" percentHeight="18.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="12.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_1" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_1" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_1" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_1" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_1" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_1" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_1" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_1" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_1" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_1" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_1" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_1" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_1" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_1" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_1" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_1" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <GridPane GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#saveBlinkProgram" prefHeight="32.0" prefWidth="32.0" text="S" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#loadBlinkProgram" prefHeight="32.0" prefWidth="32.0" text="L" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#editBlinkProgram" prefHeight="32.0" prefWidth="32.0" text="E" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#writeBlinkProgram" prefHeight="32.0" prefWidth="32.0" text="W">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#readBlinkProgram" prefHeight="32.0" prefWidth="32.0" text="R" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <CheckBox fx:id="checkBoxState1" mnemonicParsing="false" onAction="#changeSelected" text="Stav 1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </CheckBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane layoutX="75.0" layoutY="-31.0" prefHeight="65.0" prefWidth="550.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Sekvence">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Zpoždění" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="T off" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="T on" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Začít&#10;on" textAlignment="CENTER" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Počet&#10;změn" textAlignment="CENTER" GridPane.columnIndex="5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="RGB OFF" GridPane.columnIndex="6">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="RGB ON" GridPane.columnIndex="7">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_2" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_2" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_2" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_2" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_2" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_2" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_2" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_2" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_2" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_2" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_2" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_2" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_2" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_2" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_2" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_2" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_3" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_3" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_3" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_3" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_3" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_3" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_3" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_3" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_3" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_3" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_3" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_3" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_3" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_3" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_3" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_3" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_4" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_4" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_4" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_4" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_4" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_4" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_4" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_4" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_4" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_4" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_4" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_4" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_4" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_4" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_4" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_4" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_5" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_5" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_5" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_5" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_5" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_5" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_5" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_5" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_5" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_5" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_5" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_5" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_5" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_5" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_5" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_5" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_6" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_6" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_6" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_6" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_6" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_6" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_6" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_6" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_6" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_6" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_6" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_6" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_6" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_6" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_6" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_6" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_7" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_7" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_7" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_7" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_7" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_7" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_7" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_7" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_7" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_7" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_7" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_7" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_7" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_7" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_7" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_7" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <GridPane layoutX="133.0" layoutY="-31.0" prefHeight="42.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labelDelay1_8" text="100" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelDelay2_8" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff1_8" layoutX="15.0" layoutY="13.0" text="100" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOff2_8" text="100" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn1_8" text="100" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelTOn2_8" text="100" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn1_8" text="100" GridPane.columnIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelStartOn2_8" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelRep2_8" text="100" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="10.0" right="5.0" top="2.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Rectangle fx:id="rectOff1_8" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOff2_8" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Rectangle fx:id="rectOn1_8" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Rectangle fx:id="rectOn2_8" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelRep1_8" text="100" GridPane.columnIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="10.0" right="5.0" top="3.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="labelSeq1_8" text="Sekvence 1" />
+                        <Label fx:id="labelSeq2_8" text="Sekvence 2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <CheckBox fx:id="checkBoxState2" mnemonicParsing="false" onAction="#changeSelected" text="Stav 2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState3" mnemonicParsing="false" onAction="#changeSelected" text="Stav 3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState4" mnemonicParsing="false" onAction="#changeSelected" text="Stav 4" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState5" mnemonicParsing="false" onAction="#changeSelected" text="Stav 5" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState6" mnemonicParsing="false" onAction="#changeSelected" text="Stav 6" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState7" mnemonicParsing="false" onAction="#changeSelected" text="Stav 7" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkBoxState8" mnemonicParsing="false" onAction="#changeSelected" text="Stav 8" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

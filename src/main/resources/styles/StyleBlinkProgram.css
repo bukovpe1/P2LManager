@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24.6.2017, 20:23:39
+    Author     : bukov
+*/
+
+
+#sliderROn1 .track, #sliderROn2 .track, #sliderROff1 .track, #sliderROff2 .track{
+    -fx-background-color: red;
+    -fx-opacity: 0.4;
+}
+
+#sliderGOn1 .track, #sliderGOn2 .track, #sliderGOff1 .track, #sliderGOff2 .track{
+    -fx-background-color: green;
+    -fx-opacity: 0.4;
+}
+
+#sliderBOn1 .track, #sliderBOn2 .track, #sliderBOff1 .track, #sliderBOff2 .track{
+    -fx-background-color: blue;
+    -fx-opacity: 0.4;
+}
+
+
+.button:hover{
+    -fx-opacity: 1;
+    -fx-border-width: 2; 
+        
+}
+
+
+#buttonCol1OnR, #buttonCol2OnR, #buttonCol1OffR, #buttonCol2OffR{
+    -fx-background-color: 
+        red;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnG, #buttonCol2OnG, #buttonCol1OffG, #buttonCol2OffG{
+    -fx-background-color: 
+        green;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnB, #buttonCol2OnB, #buttonCol1OffB, #buttonCol2OffB{
+    -fx-background-color: 
+        blue;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnW, #buttonCol2OnW, #buttonCol1OffW, #buttonCol2OffW{
+    -fx-background-color: 
+        white;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnY, #buttonCol2OnY, #buttonCol1OffY, #buttonCol2OffY{
+    -fx-background-color: 
+        yellow;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnM, #buttonCol2OnM, #buttonCol1OffM, #buttonCol2OffM{
+    -fx-background-color: 
+        magenta;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnC, #buttonCol2OnC, #buttonCol1OffC, #buttonCol2OffC{
+    -fx-background-color: 
+        cyan;
+    -fx-border-color:
+        black;
+}
+#buttonCol1OnBk, #buttonCol2OnBk, #buttonCol1OffBk, #buttonCol2OffBk{
+    -fx-background-color: 
+        black;
+    -fx-border-color:
+        black;
+}
