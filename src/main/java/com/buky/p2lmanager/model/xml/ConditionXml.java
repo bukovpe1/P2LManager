@@ -48,22 +48,22 @@ public class ConditionXml {
                         
             for (int i = 0; i < STATES_NUM; i++) {
                 
-                pElement = (Element) doc.getElementsByTagName("program").item(i);
+                pElement = (Element) doc.getElementsByTagName("condition").item(i);
                 
                 string = pElement.getElementsByTagName("id").item(0).getTextContent();
                 int id = new MyParser(string,0).parseInt();
                 
                 string = pElement.getElementsByTagName("nextState").item(0).getTextContent();
-                int nextState = new MyParser(string,false).parseInt();
+                int nextState = new MyParser(string,-1).parseInt();
                 
                 string = pElement.getElementsByTagName("relativeValue").item(0).getTextContent();
                 boolean relativeValue = new MyParser(string,false).parseBoolean();
                 
                 string = pElement.getElementsByTagName("edge").item(0).getTextContent();
-                int edge = new MyParser(string,false).parseInt();
+                int edge = new MyParser(string,-1).parseInt();
                 
                 string = pElement.getElementsByTagName("ledSegmentEvent").item(0).getTextContent();
-                int ledSegmentEvent = new MyParser(string,false).parseInt();
+                int ledSegmentEvent = new MyParser(string,-1).parseInt();
                 
                 Condition c = new Condition(id, nextState, relativeValue, edge, ledSegmentEvent);
                 

@@ -75,7 +75,7 @@ public class BlinkProgramTabController implements Initializable {
         bpw.display();
         blinkingPrograms.clear();
         blinkingPrograms.putAll(bpw.getBlinkingPrograms());
-        System.out.println("------");
+//        System.out.println("------");
 //        for (int i = 1; i <= 8; i++) {
 //            System.out.println(blinkingPrograms.get(i).toString());
 //        }

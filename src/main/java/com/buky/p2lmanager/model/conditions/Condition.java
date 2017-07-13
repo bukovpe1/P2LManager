@@ -64,7 +64,10 @@ public class Condition {
     public void setLedSegmentEvent(int ledSegmentEvent) {
         this.ledSegmentEvent = ledSegmentEvent;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Condition{" + "id=" + id + ", nextState=" + nextState + ", relativeValue=" + relativeValue + ", edge=" + edge + ", ledSegmentEvent=" + ledSegmentEvent + '}';
+    }
+        
 }

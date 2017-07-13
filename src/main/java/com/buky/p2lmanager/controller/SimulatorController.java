@@ -5,7 +5,10 @@
  */
 package com.buky.p2lmanager.controller;
 
+import com.buky.p2lmanager.model.blinking.BlinkingProgram;
+import com.buky.p2lmanager.model.conditions.Condition;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Observable;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -26,6 +29,9 @@ import javafx.scene.shape.Rectangle;
 public class SimulatorController implements Initializable {
 
     private boolean run = true;
+    private HashMap<Integer, Condition> conditions;
+    private HashMap<Integer, BlinkingProgram> programs;
+    
     @FXML private Rectangle rectSignalization;
     
     
@@ -52,7 +58,15 @@ public class SimulatorController implements Initializable {
     private void stopSimulation(ActionEvent event) {
         run = false;
     }
-    
+
+    public void setConditions(HashMap<Integer, Condition> conditions) {
+        this.conditions = conditions;
+    }
+
+    public void setPrograms(HashMap<Integer, BlinkingProgram> programs) {
+        this.programs = programs;
+    }
+        
     private class ColorChanger  extends Observable implements Runnable{
         
         public void startChangingColor(){

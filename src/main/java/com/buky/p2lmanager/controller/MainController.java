@@ -51,22 +51,9 @@ public class MainController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-            Stage stage = new Stage();
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/fxml/Simulator.fxml"));
-        try {
-            stage.setScene(new Scene((Pane) fxmlLoader1.load()));
-        } catch (IOException ex) {
-            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            stage.show();
 
-        
         initBlinkProgramTab();
-        initConditionTab();
-        
-       
-                
+        initConditionTab();       
 //        
 //        gateway = "192.168.1.1";
 //        channels.add(new P2LChannel(1, "Channel 1"));
@@ -89,6 +76,23 @@ public class MainController implements Initializable {
 //        p2lTree.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle); 
     }    
 
+    @FXML
+    private void openSimulator(ActionEvent event) {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader;
+        try {
+            fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Simulator.fxml"));
+            Pane p = (Pane) fxmlLoader.load();
+            SimulatorController sc = fxmlLoader.<SimulatorController>getController();
+            sc.setConditions(conditions);
+            sc.setPrograms(blinkingPrograms);
+            stage.setScene(new Scene(p));
+        } catch (IOException ex) {
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        stage.show();
+    }
+    
     private void initBlinkProgramTab(){
         BlinkProgramsXml bpx = new BlinkProgramsXml();
         bpx.readConfiguration("C:\\Users\\bukov\\Desktop\\blinkingPrograms.xml");
@@ -131,8 +135,7 @@ public class MainController implements Initializable {
             System.out.println("Node click: " + name);
         }
     }
-    
-    
+        
     public void createTree(){
         CheckBoxTreeItem<String> rootItem = new CheckBoxTreeItem<>(gateway);
         rootItem.setExpanded(true);
