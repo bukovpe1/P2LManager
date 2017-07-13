@@ -95,7 +95,7 @@ public class MainController implements Initializable {
     
     private void initBlinkProgramTab(){
         BlinkProgramsXml bpx = new BlinkProgramsXml();
-        bpx.readConfiguration("C:\\Users\\bukov\\Desktop\\blinkingPrograms.xml");
+        bpx.readConfiguration("configuration\\blinkingPrograms.xml");
         blinkingPrograms = bpx.getBlinkingPrograms();
         FXMLLoader fxmlLoader;
         try {
@@ -112,7 +112,7 @@ public class MainController implements Initializable {
     
     private void initConditionTab(){
         ConditionXml cx = new ConditionXml();
-        cx.readConfiguration("C:\\Users\\bukov\\Desktop\\conditions.xml");
+        cx.readConfiguration("configuration\\conditions.xml");
         conditions = cx.getConditions();
         FXMLLoader fxmlLoader;
         try {
