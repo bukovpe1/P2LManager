@@ -100,22 +100,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_1" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_1" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_1" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_1" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_1" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_1" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_1" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_1" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_1" text="100" GridPane.columnIndex="5">
@@ -310,22 +310,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_2" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_2" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_2" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_2" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_2" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_2" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_2" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_2" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_2" text="100" GridPane.columnIndex="5">
@@ -407,22 +407,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_3" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_3" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_3" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_3" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_3" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_3" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_3" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_3" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_3" text="100" GridPane.columnIndex="5">
@@ -504,22 +504,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_4" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_4" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_4" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_4" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_4" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_4" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_4" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_4" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_4" text="100" GridPane.columnIndex="5">
@@ -601,22 +601,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_5" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_5" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_5" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_5" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_5" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_5" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_5" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_5" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_5" text="100" GridPane.columnIndex="5">
@@ -698,22 +698,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_6" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_6" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_6" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_6" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_6" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_6" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_6" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_6" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_6" text="100" GridPane.columnIndex="5">
@@ -795,22 +795,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_7" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_7" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_7" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_7" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_7" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_7" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_7" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_7" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_7" text="100" GridPane.columnIndex="5">
@@ -892,22 +892,22 @@
                         </Label>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
                            <children>
-                              <Rectangle fx:id="rectOff1_8" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOff1_8" arcHeight="5.0" arcWidth="5.0" fill="#ff2121cd" height="21.0" layoutX="18.0" layoutY="11.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOff2_8" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOff2_8" arcHeight="5.0" arcWidth="5.0" fill="#21b5ffcc" height="21.0" layoutX="15.0" layoutY="-3.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="441.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
                            <children>
-                              <Rectangle fx:id="rectOn1_8" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
+                              <Rectangle fx:id="rectOn1_8" arcHeight="5.0" arcWidth="5.0" fill="#21ff25ce" height="21.0" layoutX="-73.0" layoutY="-87.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="3.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="528.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                            <children>
-                              <Rectangle fx:id="rectOn2_8" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
+                              <Rectangle fx:id="rectOn2_8" arcHeight="5.0" arcWidth="5.0" fill="#fff421cc" height="21.0" layoutX="17.0" layoutY="-2.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="64.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="2.0" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="labelRep1_8" text="100" GridPane.columnIndex="5">

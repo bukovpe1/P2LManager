@@ -5,6 +5,7 @@
  */
 package com.buky.p2lmanager.controller;
 
+import com.buky.p2lmanager.model.ColorCorrection;
 import com.buky.p2lmanager.model.MyParser;
 import com.buky.p2lmanager.model.blinking.BlinkingProgram;
 import com.buky.p2lmanager.view.BlinkProgramWIndow;
@@ -174,28 +175,49 @@ public class BlinkProgramTabController implements Initializable {
         Rectangle rectangle2 = rectangleTemp.get(2);
         Rectangle rectangle3 = rectangleTemp.get(3);
         Rectangle rectangle4 = rectangleTemp.get(4);
-        double opacity = 1;
+//        double opacity1 = 1;
+//        double opacity2 = 1;
+//        double opacity3 = 1;
+//        double opacity4 = 1;
+//        
+//        if(!isSelected){
+//            
+//            
+//            
+//            opacity1 = 0.20;
+//            opacity2 = 0.20;
+//            opacity3 = 0.20;
+//            opacity4 = 0.20;
+//        }
         
-        if(!isSelected){
-            opacity = 0.25;
-        }
-        
-        rectangle1.setFill(Color.rgb(blinkingPrograms.get(id).getSequence1().getColorOff().getRed(), 
+        rectangle1.setFill(ColorCorrection.correction(Color.rgb(
+                blinkingPrograms.get(id).getSequence1().getColorOff().getRed(), 
                 blinkingPrograms.get(id).getSequence1().getColorOff().getGreen(), 
-                blinkingPrograms.get(id).getSequence1().getColorOff().getBlue(), 
-                opacity));
-        rectangle2.setFill(Color.rgb(blinkingPrograms.get(id).getSequence1().getColorOn().getRed(), 
+                blinkingPrograms.get(id).getSequence1().getColorOff().getBlue())));
+        rectangle2.setFill(ColorCorrection.correction(Color.rgb(
+                blinkingPrograms.get(id).getSequence1().getColorOn().getRed(), 
                 blinkingPrograms.get(id).getSequence1().getColorOn().getGreen(), 
-                blinkingPrograms.get(id).getSequence1().getColorOn().getBlue(), 
-                opacity));
-        rectangle3.setFill(Color.rgb(blinkingPrograms.get(id).getSequence2().getColorOff().getRed(), 
+                blinkingPrograms.get(id).getSequence1().getColorOn().getBlue())));
+        rectangle3.setFill(ColorCorrection.correction(Color.rgb(
+                blinkingPrograms.get(id).getSequence2().getColorOff().getRed(), 
                 blinkingPrograms.get(id).getSequence2().getColorOff().getGreen(), 
-                blinkingPrograms.get(id).getSequence2().getColorOff().getBlue(), 
-                opacity));
-        rectangle4.setFill(Color.rgb(blinkingPrograms.get(id).getSequence2().getColorOn().getRed(), 
+                blinkingPrograms.get(id).getSequence2().getColorOff().getBlue())));
+        rectangle4.setFill(ColorCorrection.correction(Color.rgb(
+                blinkingPrograms.get(id).getSequence2().getColorOn().getRed(), 
                 blinkingPrograms.get(id).getSequence2().getColorOn().getGreen(), 
-                blinkingPrograms.get(id).getSequence2().getColorOn().getBlue(), 
-                opacity));
+                blinkingPrograms.get(id).getSequence2().getColorOn().getBlue())));
+        if(!isSelected){
+            rectangle1.setOpacity(0.25);
+            rectangle2.setOpacity(0.25);
+            rectangle3.setOpacity(0.25);
+            rectangle4.setOpacity(0.25);
+        }
+        else{
+            rectangle1.setOpacity(0.75);
+            rectangle2.setOpacity(0.75);
+            rectangle3.setOpacity(0.75);
+            rectangle4.setOpacity(0.75);
+        }
     }
  
     private void addRectanglesToMap(){

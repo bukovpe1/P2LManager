@@ -381,7 +381,7 @@
                   </GridPane>
                </right>
                <left>
-                  <AreaChart fx:id="blinkPlot" animated="false" horizontalGridLinesVisible="false" legendVisible="false" minHeight="10.0" minWidth="10.0" prefHeight="300.0" prefWidth="881.0" BorderPane.alignment="CENTER">
+                  <AreaChart fx:id="blinkPlot" animated="false" horizontalGridLinesVisible="false" legendVisible="false" minHeight="10.0" minWidth="10.0" opacity="0.75" prefHeight="300.0" prefWidth="881.0" BorderPane.alignment="CENTER">
                     <xAxis>
                       <NumberAxis side="BOTTOM" fx:id="xAxis" />
                     </xAxis>

@@ -194,15 +194,22 @@ public class EditBlinkProgramController implements Initializable{
         if(settingProgramDone){
             combineColors();
             ArrayList<Color> colorList = new ArrayList<>();
-            colorList.add(rgbOff1);
-            colorList.add(rgbOn1);
-            colorList.add(rgbOff2);
-            colorList.add(rgbOn2);
-            colorList.add(rgbOnOn);
-            colorList.add(rgbOnOff);
-            colorList.add(rgbOffOn);
-            colorList.add(rgbOffOff);
+            System.out.println(rgbOff1.toString());
+            System.out.println(ColorCorrection.correction(rgbOff1).toString());
+            colorList.add(ColorCorrection.correction(rgbOff1));
+            colorList.add(ColorCorrection.correction(rgbOn1));
+            colorList.add(ColorCorrection.correction(rgbOff2));
+            colorList.add(ColorCorrection.correction(rgbOn2));
+            colorList.add(ColorCorrection.correction(rgbOnOn));
+            colorList.add(ColorCorrection.correction(rgbOnOff));
+            colorList.add(ColorCorrection.correction(rgbOffOn));
+            colorList.add(ColorCorrection.correction(rgbOffOff));
 
+            
+            System.out.println("rgb on 1 " + rgbOn1.toString());
+            System.out.println("rgb on 2 " + rgbOn2.toString());
+            System.out.println("rgb onon " + rgbOnOn.toString());
+            
             double opacity;
             for(int i=0; i < 8; i++){
                 for(Node n : blinkPlot.lookupAll(".series"+i)){
@@ -305,8 +312,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r1on = (int) sliderROn1.getValue();
-                rgbOn1 = ColorCorrection.correction(Color.rgb(r1on*17, g1on*17, b1on*17));
-                rectOn1.setFill(rgbOn1);
+                rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
+                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setRed(r1on*17);
             }
@@ -316,8 +323,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g1on = (int) sliderGOn1.getValue();
-                rgbOn1 = ColorCorrection.correction(Color.rgb(r1on*17, g1on*17, b1on*17));
-                rectOn1.setFill(rgbOn1);
+                rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
+                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setGreen(g1on*17);
             }
@@ -327,8 +334,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b1on = (int) sliderBOn1.getValue();
-                rgbOn1 = ColorCorrection.correction(Color.rgb(r1on*17, g1on*17, b1on*17));
-                rectOn1.setFill(rgbOn1);
+                rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
+                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setBlue(b1on*17);
             }
@@ -338,8 +345,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r2on = (int) sliderROn2.getValue();
-                rgbOn2 = ColorCorrection.correction(Color.rgb(r2on*17, g2on*17, b2on*17));
-                rectOn2.setFill(rgbOn2);
+                rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
+                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setRed(r2on*17);
             }
@@ -349,8 +356,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g2on = (int) sliderGOn2.getValue();
-                rgbOn2 = ColorCorrection.correction(Color.rgb(r2on*17, g2on*17, b2on*17));
-                rectOn2.setFill(rgbOn2);
+                rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
+                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setGreen(g2on*17);
             }
@@ -360,8 +367,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b2on = (int) sliderBOn2.getValue();
-                rgbOn2 = ColorCorrection.correction(Color.rgb(r2on*17, g2on*17, b2on*17));
-                rectOn2.setFill(rgbOn2);
+                rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
+                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setBlue(b2on*17);
             }
@@ -371,8 +378,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r1off = (int) sliderROff1.getValue();
-                rgbOff1 = ColorCorrection.correction(Color.rgb(r1off*17, g1off*17, b1off*17));
-                rectOff1.setFill(rgbOff1);
+                rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
+                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setRed(r1off*17);
             }
@@ -382,8 +389,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g1off = (int) sliderGOff1.getValue();
-                rgbOff1 = ColorCorrection.correction(Color.rgb(r1off*17, g1off*17, b1off*17));
-                rectOff1.setFill(rgbOff1);
+                rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
+                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setGreen(g1off*17);
             }
@@ -393,8 +400,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b1off = (int) sliderBOff1.getValue();
-                rgbOff1 = ColorCorrection.correction(Color.rgb(r1off*17, g1off*17, b1off*17));
-                rectOff1.setFill(rgbOff1);
+                rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
+                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setBlue(b1off*17);
             }
@@ -404,8 +411,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r2off = (int) sliderROff2.getValue();
-                rgbOff2 = ColorCorrection.correction(Color.rgb(r2off*17, g2off*17, b2off*17));
-                rectOff2.setFill(rgbOff2);
+                rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
+                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setRed(r2off*17);
             }
@@ -415,8 +422,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g2off = (int) sliderGOff2.getValue();
-                rgbOff2 = ColorCorrection.correction(Color.rgb(r2off*17, g2off*17, b2off*17));
-                rectOff2.setFill(rgbOff2);
+                rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
+                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setGreen(g2off*17);
             }
@@ -426,8 +433,8 @@ public class EditBlinkProgramController implements Initializable{
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b2off = (int) sliderBOff2.getValue();
-                rgbOff2 = ColorCorrection.correction(Color.rgb(r2off*17, g2off*17, b2off*17));
-                rectOff2.setFill(rgbOff2);
+                rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
+                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setBlue(b2off*17);
             }
