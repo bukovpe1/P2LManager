@@ -368,7 +368,7 @@
                         </Spinner>
                         <Spinner fx:id="spinnerTEnd" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <valueFactory>
-                                <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="0.05" initialValue="10" max="100000" min="0" />
+                                <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="0" max="100" min="0" />
                             </valueFactory>
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />

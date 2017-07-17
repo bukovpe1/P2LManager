@@ -5,7 +5,7 @@
  */
 package com.buky.p2lmanager.controller;
 
-import com.buky.p2lmanager.model.ColorCorrection;
+import com.buky.p2lmanager.model.ColorOperations;
 import com.buky.p2lmanager.model.MyParser;
 import com.buky.p2lmanager.model.blinking.BlinkingProgram;
 import com.buky.p2lmanager.view.BlinkProgramWIndow;
@@ -190,19 +190,19 @@ public class BlinkProgramTabController implements Initializable {
 //            opacity4 = 0.20;
 //        }
         
-        rectangle1.setFill(ColorCorrection.correction(Color.rgb(
+        rectangle1.setFill(ColorOperations.correction(Color.rgb(
                 blinkingPrograms.get(id).getSequence1().getColorOff().getRed(), 
                 blinkingPrograms.get(id).getSequence1().getColorOff().getGreen(), 
                 blinkingPrograms.get(id).getSequence1().getColorOff().getBlue())));
-        rectangle2.setFill(ColorCorrection.correction(Color.rgb(
+        rectangle2.setFill(ColorOperations.correction(Color.rgb(
                 blinkingPrograms.get(id).getSequence1().getColorOn().getRed(), 
                 blinkingPrograms.get(id).getSequence1().getColorOn().getGreen(), 
                 blinkingPrograms.get(id).getSequence1().getColorOn().getBlue())));
-        rectangle3.setFill(ColorCorrection.correction(Color.rgb(
+        rectangle3.setFill(ColorOperations.correction(Color.rgb(
                 blinkingPrograms.get(id).getSequence2().getColorOff().getRed(), 
                 blinkingPrograms.get(id).getSequence2().getColorOff().getGreen(), 
                 blinkingPrograms.get(id).getSequence2().getColorOff().getBlue())));
-        rectangle4.setFill(ColorCorrection.correction(Color.rgb(
+        rectangle4.setFill(ColorOperations.correction(Color.rgb(
                 blinkingPrograms.get(id).getSequence2().getColorOn().getRed(), 
                 blinkingPrograms.get(id).getSequence2().getColorOn().getGreen(), 
                 blinkingPrograms.get(id).getSequence2().getColorOn().getBlue())));

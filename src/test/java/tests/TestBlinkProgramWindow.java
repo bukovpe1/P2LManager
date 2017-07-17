@@ -22,7 +22,7 @@ public class TestBlinkProgramWindow {
         
         BlinkGraphValues bgv = new BlinkGraphValues(1, 0.1, 0.2, 4, true, false, 0, 0, 0, 0, false, false);
         bgv.compute();
-        Assert.assertEquals(6, bgv.getTimeAxis().size());
+        Assert.assertEquals(6+1, bgv.getTimeAxis().size());
     }
     
     @Test
@@ -30,14 +30,14 @@ public class TestBlinkProgramWindow {
         
         BlinkGraphValues bgv = new BlinkGraphValues(0, 0.1, 0.2, 4, true, false, 0, 0, 0, 0, false, false);
         bgv.compute();
-        Assert.assertEquals(5, bgv.getTimeAxis().size());
+        Assert.assertEquals(5+1, bgv.getTimeAxis().size());
     }
     
     @Test
     public void testTimeAxis3(){
         BlinkGraphValues bgv = new BlinkGraphValues(1, 0.1, 0.2, 4, true, false, 1, 0.2, 0.1, 4, false, false);
         bgv.compute();
-        Assert.assertEquals(5, bgv.getTimeAxis().size());
+        Assert.assertEquals(5+1, bgv.getTimeAxis().size());
     }
     
     @Test
@@ -45,7 +45,7 @@ public class TestBlinkProgramWindow {
         
         BlinkGraphValues bgv = new BlinkGraphValues(1, 0.1, 0.2, 3, true, false, 3, 0.1, 0.2, 4, false, false);
         bgv.compute();
-        Assert.assertEquals(9, bgv.getTimeAxis().size());
+        Assert.assertEquals(9+1, bgv.getTimeAxis().size());
     }
     
     @Test
@@ -53,7 +53,7 @@ public class TestBlinkProgramWindow {
         
         BlinkGraphValues bgv = new BlinkGraphValues(1, 1, 2, 4, false, false, 2.5, 0.3, 0.7, 5, true, false);
         bgv.compute();
-        Assert.assertEquals(11, bgv.getTimeAxis().size());
+        Assert.assertEquals(11+1, bgv.getTimeAxis().size());
     }
     
     private void printTimeAxis(ArrayList<Double> ta){

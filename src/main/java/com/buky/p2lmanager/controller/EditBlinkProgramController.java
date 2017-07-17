@@ -5,7 +5,7 @@
  */
 package com.buky.p2lmanager.controller;
 
-import com.buky.p2lmanager.model.ColorCorrection;
+import com.buky.p2lmanager.model.ColorOperations;
 import com.buky.p2lmanager.model.blinking.BlinkGraphValues;
 import com.buky.p2lmanager.model.blinking.BlinkingProgram;
 import java.net.URL;
@@ -19,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -39,11 +40,11 @@ public class EditBlinkProgramController implements Initializable{
     
     @FXML private Slider sliderROn1, sliderGOn1, sliderBOn1, sliderROn2, sliderGOn2, sliderBOn2, sliderROff1, sliderGOff1, sliderBOff1, sliderROff2, sliderGOff2, sliderBOff2;
     @FXML private Rectangle rectOn1, rectOn2, rectOff1, rectOff2;
-    @FXML private Spinner spinnerDelay1, spinnerDelay2, spinnerTOff1, spinnerTOff2, spinnerTOn1, spinnerTOn2, spinnerRep1, spinnerRep2; //, spinnerTStart, spinnerTEnd;
+    @FXML private Spinner spinnerDelay1, spinnerDelay2, spinnerTOff1, spinnerTOff2, spinnerTOn1, spinnerTOn2, spinnerRep1, spinnerRep2, spinnerTEnd;
     @FXML private AreaChart<Number, Number> blinkPlot;
     @FXML private CheckBox checkBoxStartOn1, checkBoxStartOn2, checkBoxInfRep1, checkBoxInfRep2;
     @FXML private ChoiceBox choiceBoxStates;
-//    @FXML private NumberAxis xAxis;
+    @FXML private NumberAxis xAxis;
     
     private Color rgbOn1, rgbOn2, rgbOff1, rgbOff2;
     private Color rgbOnOn, rgbOnOff, rgbOffOn, rgbOffOff;
@@ -59,7 +60,7 @@ public class EditBlinkProgramController implements Initializable{
     
     boolean settingProgramDone = false;
     
-//    private double tStartGraph, tEndGraph;
+    private int tEndGraph = 20;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,6 +72,8 @@ public class EditBlinkProgramController implements Initializable{
         addCheckBoxListeners();
         setChoiceBox();
         addChoiceBoxListener();
+        xAxis.setAutoRanging(false);
+        spinnerTEnd.getValueFactory().setValue(20);
 //        initColors();
 
     }
@@ -158,14 +161,16 @@ public class EditBlinkProgramController implements Initializable{
             bgv.compute();
             ArrayList<ArrayList> graphValues = bgv.getGraphValues();
             drawGraph(graphValues);
+         //   tEndGraph = bgv.getEndTime()+0.01;
+            setGraphLimits();
         }
         
 //        tStartGraph = 0;
-//        tEndGraph = bgv.getEndTime()+0.01;
+        
 //        spinnerTStart.getValueFactory().setValue(tStartGraph);
 //        spinnerTEnd.getValueFactory().setValue(tEndGraph);
 //        
-//        setGraphLimits();
+        
         
     }
     
@@ -194,31 +199,17 @@ public class EditBlinkProgramController implements Initializable{
         if(settingProgramDone){
             combineColors();
             ArrayList<Color> colorList = new ArrayList<>();
-            System.out.println(rgbOff1.toString());
-            System.out.println(ColorCorrection.correction(rgbOff1).toString());
-            colorList.add(ColorCorrection.correction(rgbOff1));
-            colorList.add(ColorCorrection.correction(rgbOn1));
-            colorList.add(ColorCorrection.correction(rgbOff2));
-            colorList.add(ColorCorrection.correction(rgbOn2));
-            colorList.add(ColorCorrection.correction(rgbOnOn));
-            colorList.add(ColorCorrection.correction(rgbOnOff));
-            colorList.add(ColorCorrection.correction(rgbOffOn));
-            colorList.add(ColorCorrection.correction(rgbOffOff));
-
+            colorList.add(ColorOperations.correction(rgbOff1));
+            colorList.add(ColorOperations.correction(rgbOn1));
+            colorList.add(ColorOperations.correction(rgbOff2));
+            colorList.add(ColorOperations.correction(rgbOn2));
+            colorList.add(ColorOperations.correction(rgbOnOn));
+            colorList.add(ColorOperations.correction(rgbOnOff));
+            colorList.add(ColorOperations.correction(rgbOffOn));
+            colorList.add(ColorOperations.correction(rgbOffOff));
             
-            System.out.println("rgb on 1 " + rgbOn1.toString());
-            System.out.println("rgb on 2 " + rgbOn2.toString());
-            System.out.println("rgb onon " + rgbOnOn.toString());
-            
-            double opacity;
             for(int i=0; i < 8; i++){
                 for(Node n : blinkPlot.lookupAll(".series"+i)){
-                    if(colorList.get(i).equals(Color.BLACK)){
-                        opacity = 0.02;
-                    }
-                    else{
-                        opacity = 0.3;
-                    }
                     n.setStyle("-fx-background-color: rgb(" + colorList.get(i).getRed()*255 + "," + colorList.get(i).getGreen()*255 + "," + colorList.get(i).getBlue()*255 + "), white; "
                             + "-fx-stroke: rgb(" + colorList.get(i).getRed()*255 + "," + colorList.get(i).getGreen()*255 + "," + colorList.get(i).getBlue()*255 + "); "
                             + "-fx-fill: rgba(" + colorList.get(i).getRed()*255 + "," + colorList.get(i).getGreen()*255 + "," + colorList.get(i).getBlue()*255 + "," + colorList.get(i).getOpacity() + "); ");
@@ -234,6 +225,10 @@ public class EditBlinkProgramController implements Initializable{
         rgbOffOn = Color.rgb((r1off*17)|(r2on*17), (g1off*17)|(g2on*17), (b1off*17)|(b2on*17));
         rgbOffOff = Color.rgb((r1off*17)|(r2off*17), (g1off*17)|(g2off*17), (b1off*17)|(b2off*17));
        
+    }
+    
+    private void setGraphLimits(){
+        xAxis.setUpperBound(tEndGraph);
     }
     
     private void addCheckBoxListeners(){
@@ -313,7 +308,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r1on = (int) sliderROn1.getValue();
                 rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
-                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
+                rectOn1.setFill(ColorOperations.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setRed(r1on*17);
             }
@@ -324,7 +319,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g1on = (int) sliderGOn1.getValue();
                 rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
-                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
+                rectOn1.setFill(ColorOperations.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setGreen(g1on*17);
             }
@@ -335,7 +330,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b1on = (int) sliderBOn1.getValue();
                 rgbOn1 = Color.rgb(r1on*17, g1on*17, b1on*17);
-                rectOn1.setFill(ColorCorrection.correction(rgbOn1));
+                rectOn1.setFill(ColorOperations.correction(rgbOn1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOn().setBlue(b1on*17);
             }
@@ -346,7 +341,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r2on = (int) sliderROn2.getValue();
                 rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
-                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
+                rectOn2.setFill(ColorOperations.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setRed(r2on*17);
             }
@@ -357,7 +352,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g2on = (int) sliderGOn2.getValue();
                 rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
-                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
+                rectOn2.setFill(ColorOperations.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setGreen(g2on*17);
             }
@@ -368,7 +363,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b2on = (int) sliderBOn2.getValue();
                 rgbOn2 = Color.rgb(r2on*17, g2on*17, b2on*17);
-                rectOn2.setFill(ColorCorrection.correction(rgbOn2));
+                rectOn2.setFill(ColorOperations.correction(rgbOn2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOn().setBlue(b2on*17);
             }
@@ -379,7 +374,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r1off = (int) sliderROff1.getValue();
                 rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
-                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
+                rectOff1.setFill(ColorOperations.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setRed(r1off*17);
             }
@@ -390,7 +385,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g1off = (int) sliderGOff1.getValue();
                 rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
-                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
+                rectOff1.setFill(ColorOperations.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setGreen(g1off*17);
             }
@@ -401,7 +396,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b1off = (int) sliderBOff1.getValue();
                 rgbOff1 = Color.rgb(r1off*17, g1off*17, b1off*17);
-                rectOff1.setFill(ColorCorrection.correction(rgbOff1));
+                rectOff1.setFill(ColorOperations.correction(rgbOff1));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence1().getColorOff().setBlue(b1off*17);
             }
@@ -412,7 +407,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 r2off = (int) sliderROff2.getValue();
                 rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
-                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
+                rectOff2.setFill(ColorOperations.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setRed(r2off*17);
             }
@@ -423,7 +418,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 g2off = (int) sliderGOff2.getValue();
                 rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
-                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
+                rectOff2.setFill(ColorOperations.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setGreen(g2off*17);
             }
@@ -434,7 +429,7 @@ public class EditBlinkProgramController implements Initializable{
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 b2off = (int) sliderBOff2.getValue();
                 rgbOff2 = Color.rgb(r2off*17, g2off*17, b2off*17);
-                rectOff2.setFill(ColorCorrection.correction(rgbOff2));
+                rectOff2.setFill(ColorOperations.correction(rgbOff2));
                 setGraphColors();
                 blinkingPrograms.get(programID).getSequence2().getColorOff().setBlue(b2off*17);
             }
@@ -559,12 +554,11 @@ public class EditBlinkProgramController implements Initializable{
 //            spinnerTStart.getValueFactory().setValue(tStartGraph);
 //            setGraphLimits();
 //        });
-//        spinnerTEnd.valueProperty().addListener((ObservableValue obs, Object oldValue, Object newValue) -> {
-//            SpinnerValueFactory.DoubleSpinnerValueFactory dblFactory = (SpinnerValueFactory.DoubleSpinnerValueFactory) spinnerTEnd.getValueFactory();
-//            tEndGraph = setSpinnerValue(newValue, oldValue, dblFactory.getAmountToStepBy());
-//            spinnerTEnd.getValueFactory().setValue(tEndGraph);
-//            setGraphLimits();
-//        });
+        spinnerTEnd.valueProperty().addListener((ObservableValue obs, Object oldValue, Object newValue) -> {
+            tEndGraph = setSpinnerValue(newValue, oldValue);
+            spinnerTEnd.getValueFactory().setValue(tEndGraph);
+            setGraphLimits();
+        });
     }
     
     private double setSpinnerValue(Object newValue, Object oldValue, double dec) {
@@ -639,14 +633,5 @@ public class EditBlinkProgramController implements Initializable{
         
         //double op = ( c.getRed() + c.getGreen() + c.getBlue() ) / 3;
         return op;
-    }
-    
-
-    
-    private void setGraphLimits(){
-        System.out.println(tStartGraph + " " + tEndGraph);
-        xAxis.setAutoRanging(false);
-        xAxis.setLowerBound(tStartGraph);
-        xAxis.setUpperBound(tEndGraph);
     }
 */   

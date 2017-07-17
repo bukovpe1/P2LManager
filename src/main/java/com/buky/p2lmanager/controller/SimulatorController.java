@@ -15,9 +15,12 @@ import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -29,11 +32,12 @@ import javafx.scene.shape.Rectangle;
 public class SimulatorController implements Initializable {
 
     private boolean run = true;
+    private int programID = 1;
     private HashMap<Integer, Condition> conditions;
     private HashMap<Integer, BlinkingProgram> programs;
     
     @FXML private Rectangle rectSignalization;
-    
+    @FXML private ChoiceBox choiceBoxStates;
     
     /**
      * Initializes the controller class.
@@ -42,10 +46,6 @@ public class SimulatorController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
-    
-    private void changeColor(){
-        
-    }
     
     @FXML
     private void startSimulation(ActionEvent event) {
@@ -59,6 +59,22 @@ public class SimulatorController implements Initializable {
         run = false;
     }
 
+    private void setChoiceBox(){
+        for (int i = 1; i <= 8; i++) {
+            choiceBoxStates.getItems().add("Stav " + i);
+        }
+        choiceBoxStates.getSelectionModel().select(0);
+    }
+    
+    private void addChoiceBoxListener(){
+        choiceBoxStates.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>(){
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                programID = newValue.intValue()+1;
+            }
+        });
+    }
+    
     public void setConditions(HashMap<Integer, Condition> conditions) {
         this.conditions = conditions;
     }
@@ -67,6 +83,13 @@ public class SimulatorController implements Initializable {
         this.programs = programs;
     }
         
+    private Color getColor(double time){
+        
+        
+        
+        return Color.ALICEBLUE;
+    }
+    
     private class ColorChanger  extends Observable implements Runnable{
         
         public void startChangingColor(){
@@ -77,8 +100,15 @@ public class SimulatorController implements Initializable {
         @Override
         public void run() {
             Random rnd = new Random();
+            int i = 0;
+            double time;
             while(run){
+                time = (double) i * 50 / 1000;
+                
+                getColor(time);
+                
                 rectSignalization.setFill(Color.color(rnd.nextDouble(), rnd.nextDouble(), rnd.nextDouble()));
+                i++;
                 try {
                     TimeUnit.MILLISECONDS.sleep(50);
                 } catch (InterruptedException ex) {

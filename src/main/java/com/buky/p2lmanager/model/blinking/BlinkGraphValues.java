@@ -145,8 +145,37 @@ public class BlinkGraphValues {
                     }
                 }
             }
-            ta.add(tNew);
+            
+            
+            if(tNew >= 100){
+                break;
+            }
+            else{
+                ta.add(tNew);
+            }
+            
         }
+        
+        // add last time - 100 s
+        if(seqIndex == 1){
+            ta.add(100.0);
+            if(seq1.lastEntry().getValue() == 0){
+                seq1.put(100.0, 1);
+            }
+            else{
+                seq1.put(100.0, 0);
+            }
+        }
+        if(seqIndex == 2){
+            if(seq2.lastEntry().getValue() == 0){
+                seq2.put(100.0, 1);
+            }
+            else{
+                seq2.put(100.0, 0);
+            }
+        }
+        
+        
         return ta;
     }
     
@@ -161,77 +190,6 @@ public class BlinkGraphValues {
             if(!timeAxis.contains(t)){
                 timeAxis.add(t);
             }
-        }
-        Collections.sort(timeAxis);
-    }
-    
-    
-    private void computeTimeAxis2(){
-        
-        timeAxis = new ArrayList<>();
-        seq1 = new TreeMap<>();
-        seq2 = new TreeMap<>();
-                
-        for (int i = 0; i <= rep1; i = i+2) {
-            double tOni = delay1 + (tOn1+tOff1) * i/2;
-            double tOffi = delay1 + (tOn1+tOff1) * i/2;
-            
-            if(startWithOn1){
-                tOffi = tOffi + tOn1;
-            }
-            else{
-                tOni = tOni + tOff1;
-            }
-            
-            if(tOni < endTime){
-                seq1.put(tOni, 1);
-                if(!timeAxis.contains(tOni)){
-                    timeAxis.add(tOni);
-                }
-            }
-            else{
-                break;
-            }
-            if(tOffi < endTime){
-                seq1.put(tOffi, 0);
-                if(!timeAxis.contains(tOffi)){
-                    timeAxis.add(tOffi);
-                }
-            }
-            else{
-                break;
-            }                 
-        }
-        
-        for (int i = 0; i <= rep2; i = i+2) {
-            double tOni = delay2 + (tOn2+tOff2) * i/2;
-            double tOffi = delay2 + (tOn2+tOff2) * i/2 + tOn2;
-            
-            if(startWithOn2){
-                tOffi = tOffi + tOn2;
-            }
-            else{
-                tOni = tOni + tOff2;
-            }
-            
-            if(tOni < endTime){
-                seq2.put(tOni, 1);
-                if(!timeAxis.contains(tOni)){
-                    timeAxis.add(tOni);
-                }
-            }
-            else{
-                break;
-            }
-            if(tOffi < endTime){
-                seq2.put(tOffi, 0);
-                if(!timeAxis.contains(tOffi)){
-                    timeAxis.add(tOffi);
-                }
-            }
-            else{
-                break;
-            }                 
         }
         Collections.sort(timeAxis);
     }
@@ -275,20 +233,21 @@ public class BlinkGraphValues {
     
     private void computeEndTime(){
         
-        int rep1temp = rep1;
-        if(rep1>MAX_REP){rep1temp = MAX_REP;}
-        double tEnd1 = delay1 + (tOn1 + tOff1)*rep1temp;
-        
-        int rep2temp = rep2;
-        if(rep2>MAX_REP){rep2temp = MAX_REP;}
-        double tEnd2 = delay2 + (tOn2 + tOff2)*rep2temp;
-        
-        if(tEnd1 > tEnd2){
-            endTime = tEnd1;
-        }
-        else{
-            endTime = tEnd2;
-        }
+//        int rep1temp = rep1;
+//        if(rep1>MAX_REP){rep1temp = MAX_REP;}
+//        double tEnd1 = delay1 + (tOn1 + tOff1)*rep1temp;
+//        
+//        int rep2temp = rep2;
+//        if(rep2>MAX_REP){rep2temp = MAX_REP;}
+//        double tEnd2 = delay2 + (tOn2 + tOff2)*rep2temp;
+//        
+//        if(tEnd1 > tEnd2){
+//            endTime = tEnd1;
+//        }
+//        else{
+//            endTime = tEnd2;
+//        }
+        endTime = 100;
         
     }
     

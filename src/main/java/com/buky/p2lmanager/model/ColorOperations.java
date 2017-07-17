@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
  *
  * @author bukov
  */
-public class ColorCorrection {
+public class ColorOperations {
     
     public static Color correction(Color c){
         
